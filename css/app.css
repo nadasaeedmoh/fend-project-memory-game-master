@@ -1,0 +1,168 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 35% ;/* 4125%;  660 px */
+    min-height: 680px;/*4250%; 680 px*/
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;/*781.25%; 125px */
+    width: 23%; /* 125px */
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 18%; /*2156.25%;  345px */
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.score-panel .timer{
+    margin-left: 50px;
+    color: #C70039;
+    font-weight: bold;
+}
+
+.score-panel .moves{
+    color: #C70039;
+    font-weight: bold;
+}
+
+.win{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0;
+    margin: 0 auto;
+    left: 24%; /* 2812.5%; 450px*/
+    top: 20%; /* 1250%;  200px*/
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(160deg, #FFFC2B 0%, #aa7ecd 100%);
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+
+}
+
+.content{
+    margin: 10% auto;
+    width: 70%;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: x-large;
+}
+
+.Congratulations{
+    color: #900C3F;
+}
+
+.view{
+    display: block;
+}
+
+.play-again{
+    background-color: white;
+    border: 1px solid #001470;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold; 
+    color: #C70039;
+    padding: 20px;
+}
